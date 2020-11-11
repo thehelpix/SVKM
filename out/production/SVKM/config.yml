@@ -1,0 +1,12 @@
+vk:
+  group_id: idГруппыБезМинуса
+  token: "токен"
+
+settings:
+  colon: true
+
+block_cmds:
+  - 'stop'
+
+white_players:
+  - 'TheHelpix'
