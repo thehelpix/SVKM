@@ -35,9 +35,23 @@ public class Utils {
         });
     }
 
+    public static Boolean isMinLevel(int id) {
+        System.out.println(ConfigUtils.getLevelAdmin(id));
+        if (ConfigUtils.getLevelAdmin(id) == 50) {
+            return true;
+        }
+        if (ConfigUtils.getLevelAdmin(id) == 100) {
+            return true;
+        }
+        return false;
+    }
+
     public static String getPermLevel(int id) {
         if (!ConfigUtils.isAdmin(id)) {
             return "нету";
+        }
+        if (!isMinLevel(id)) {
+            return "некорректный лвл!";
         }
         return ConfigUtils.getLevelAdmin(id)+" лвл";
     }

@@ -27,7 +27,6 @@ public class VKUtils {
                 for(int i = 0; i < array.size(); i++) {
                     JsonObject obj = array.get(i).getAsJsonObject();
                     String first_name = obj.get("first_name").getAsString();
-                    String last_name = obj.get("last_name").getAsString();
                     int uuid = obj.get("id").getAsInt();
                     return "[id"+uuid+"|"+first_name+"]";
                 }
@@ -51,10 +50,7 @@ public class VKUtils {
                 JsonArray array = object.get("response").getAsJsonArray();
                 for(int i = 0; i < array.size(); i++) {
                     JsonObject obj = array.get(i).getAsJsonObject();
-                    String first_name = obj.get("first_name").getAsString();
-                    String last_name = obj.get("last_name").getAsString();
-                    int uuid = obj.get("id").getAsInt();
-                    return first_name;
+                    return obj.get("first_name").getAsString();
                 }
             }
             return null;
@@ -98,7 +94,6 @@ public class VKUtils {
                     JsonObject obj = array.get(i).getAsJsonObject();
                     String first_name = obj.get("first_name").getAsString();
                     String last_name = obj.get("last_name").getAsString();
-                    int uuid = obj.get("id").getAsInt();
                     return first_name+" "+last_name;
                 }
             }

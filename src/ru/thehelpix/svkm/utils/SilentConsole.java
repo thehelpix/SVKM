@@ -21,9 +21,7 @@ public class SilentConsole implements ConsoleCommandSender {
     private final ReceiveMessage message;
 
     public static void sendCommand(ReceiveMessage message, String cmd) {
-        Bukkit.getScheduler().runTask(Main.getInstance(), () -> {
-            Bukkit.dispatchCommand(new SilentConsole(message), cmd);
-        });
+        Bukkit.getScheduler().runTask(Main.getInstance(), () -> Bukkit.dispatchCommand(new SilentConsole(message), cmd));
     }
 
     public SilentConsole(ReceiveMessage message) {

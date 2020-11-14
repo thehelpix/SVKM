@@ -1,7 +1,6 @@
 package ru.thehelpix.svkm.utils;
 
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import ru.thehelpix.svkm.Main;
 
 public class Color {
@@ -12,10 +11,7 @@ public class Color {
     }
 
     public static void log(String str) {
-        Bukkit.getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes('&', "&6["+plugin.getDescription().getName()+"&6] "+str));
-    }
-    public static void message(String str) {
-        Bukkit.getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes('&', "&9[VK] "+str));
+        Bukkit.getConsoleSender().sendMessage(Color.parse("&6["+plugin.getDescription().getName()+"&6] "+str));
     }
     public static String cmd(String str) {
         return parse("&6["+plugin.getDescription().getName()+"&6] "+str);

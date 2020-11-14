@@ -8,21 +8,21 @@ public class ConfigUtils {
     private final static Main plugin = Main.getInstance();
 
     public static Boolean isWhitePlayer(String name) {
-        List<String> cmds = plugin.getConfig().getStringList("white_players");
-        return cmds.contains(name.toLowerCase());
+        List<String> players = plugin.getConfig().getStringList("white_players");
+        return players.contains(name.toLowerCase());
     }
 
     public static void addWhitePlayer(String name) {
-        List<String> cmds = plugin.getConfig().getStringList("white_players");
-        cmds.add(name.toLowerCase());
-        plugin.getConfig().set("white_players", cmds);
+        List<String> players = plugin.getConfig().getStringList("white_players");
+        players.add(name.toLowerCase());
+        plugin.getConfig().set("white_players", players);
         plugin.saveConfig();
     }
 
     public static void removeWhitePlayer(String cmd) {
-        List<String> cmds = plugin.getConfig().getStringList("white_players");
-        cmds.remove(cmd.toLowerCase());
-        plugin.getConfig().set("white_players", cmds);
+        List<String> players = plugin.getConfig().getStringList("white_players");
+        players.remove(cmd.toLowerCase());
+        plugin.getConfig().set("white_players", players);
         plugin.saveConfig();
     }
 
