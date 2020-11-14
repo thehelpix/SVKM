@@ -11,7 +11,7 @@
 <a href="https://vk.com/sayhe"><b>Сайхээ Лайдып</b></a>
 
 ## Link
-<br><a href="https://vk.com/hdevhome"><b>hDev</b></a>
+<a href="https://vk.com/hdevhome"><b>hDev</b></a>
 
 ## Лицензия
 [MIT](https://choosealicense.com/licenses/mit/)
