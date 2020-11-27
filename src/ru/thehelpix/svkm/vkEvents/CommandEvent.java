@@ -1,5 +1,6 @@
 package ru.thehelpix.svkm.vkEvents;
 
+import ru.thehelpix.svkm.vkApi.VkHandler;
 import ru.thehelpix.svkm.vkApi.VkListener;
 import ru.thehelpix.svkm.vkApi.event.ReceiveMessageEvent;
 import ru.thehelpix.svkm.vkApi.message.ReceiveMessage;
