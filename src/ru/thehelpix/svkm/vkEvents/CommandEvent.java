@@ -1,6 +1,5 @@
 package ru.thehelpix.svkm.vkEvents;
 
-import ru.thehelpix.svkm.vkApi.VkHandler;
 import ru.thehelpix.svkm.vkApi.VkListener;
 import ru.thehelpix.svkm.vkApi.event.ReceiveMessageEvent;
 import ru.thehelpix.svkm.vkApi.message.ReceiveMessage;
@@ -22,7 +21,7 @@ public class CommandEvent implements VkListener {
 
         if (args[0].equalsIgnoreCase("помощь") || args[0].equalsIgnoreCase("help")) {
             LoggerVK.log();
-            sender.sendMessage(screenName+" привет! Я бот SVKM, проще говоря бот-консоль" +
+            sender.sendMessage(screenName+", привет! Я бот SVKM, проще говоря бот-консоль" +
                     "\nУровень доступа: "+Utils.getPermLevel(senderId)+Utils.getPermLevelCmd(senderId));
         }
 

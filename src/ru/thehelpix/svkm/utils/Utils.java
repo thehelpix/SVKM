@@ -1,6 +1,6 @@
 package ru.thehelpix.svkm.utils;
 
-import org.bukkit.Bukkit;
+import org.bukkit.Bukkit;;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import ru.thehelpix.svkm.Main;

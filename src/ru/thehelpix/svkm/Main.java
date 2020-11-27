@@ -1,12 +1,15 @@
 package ru.thehelpix.svkm;
 
 import org.bukkit.Bukkit;
+import org.spigotmc.Metrics;
 import ru.thehelpix.svkm.utils.VKUtils;
 import ru.thehelpix.svkm.vkApi.Group;
 import org.bukkit.plugin.java.JavaPlugin;
 import ru.thehelpix.svkm.commands.SVKMCmd;
 import ru.thehelpix.svkm.utils.Color;
 import ru.thehelpix.svkm.vkEvents.CommandEvent;
+
+import java.io.IOException;
 
 public class Main extends JavaPlugin {
     private static Main plugin;
@@ -16,6 +19,12 @@ public class Main extends JavaPlugin {
     public void onEnable() {
         saveDefaultConfig();
         plugin = this;
+        try {
+            Metrics metrics = new Metrics();
+            metrics.start();
+        } catch (IOException e) {
+            // Failed to submit the stats :-(
+        }
         if (!VKUtils.isTrueToken()) {
             Color.log("&4Ваш токен не действителен!");
             Bukkit.getPluginManager().disablePlugin(this);
