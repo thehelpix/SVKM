@@ -10,8 +10,9 @@
 ## Авторы:
 <a href="https://vk.com/sayhe"><b>Сайхээ Лайдып</b></a>
 
-## Link
+## Links
 <a href="https://vk.com/hdevhome"><b>hDev</b></a>
+[SpigotMC](https://www.spigotmc.org/resources/aap.84913/)
 
 ## Лицензия
 [MIT](https://choosealicense.com/licenses/mit/)
