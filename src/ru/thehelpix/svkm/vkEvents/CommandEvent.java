@@ -1,5 +1,6 @@
 package ru.thehelpix.svkm.vkEvents;
 
+import org.bukkit.entity.Player;
 import ru.thehelpix.svkm.vkApi.VkHandler;
 import ru.thehelpix.svkm.vkApi.VkListener;
 import ru.thehelpix.svkm.vkApi.event.ReceiveMessageEvent;
@@ -11,7 +12,8 @@ import ru.thehelpix.svkm.utils.*;
 public class CommandEvent implements VkListener {
 
     @VkHandler
-    public void onMessage(ReceiveMessageEvent event) {
+    public void onMessage(ReceiveMessageEvent event) {  
+        System.out.println(event.getMessage().getFrom());
         if (Integer.parseInt(event.getMessage().getFrom()) < 0) return;
         if (event.getMessage().getText().length() < 1) return;
         new LoggerVK(event);
@@ -44,6 +46,20 @@ public class CommandEvent implements VkListener {
             }
             sender.sendMessage(screenName+", сервер релоаднут!");
             Main.getInstance().getServer().reload();
+        }
+
+        if (args[0].equalsIgnoreCase("!онлайн")) {
+            LoggerVK.log();
+            if (!ConfigUtils.isAdmin(senderId) || ConfigUtils.getLevelAdmin(senderId) < 50) {
+                sender.sendMessage(screenName+", У Вас недостаточно прав чтобы посмотреть онлайн сервера!");
+                return;
+            }
+            int online = Bukkit.getOnlinePlayers().size();
+            StringBuilder sb = new StringBuilder();
+            for (Player player : Bukkit.getOnlinePlayers()) {
+                sb.append("\n").append(player.getName());
+            }
+            sender.sendMessage(screenName+", онлайн "+online+".\nИгроки:"+sb);
         }
 
         if (args[0].equalsIgnoreCase("!кик")) {
