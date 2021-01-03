@@ -1,8 +1,0 @@
-main: ru.thehelpix.asr.Main
-author: TheHelpix
-name: AutoServerRestart
-version: 1.0
-
-commands:
-  asr:
-    description: asr command!

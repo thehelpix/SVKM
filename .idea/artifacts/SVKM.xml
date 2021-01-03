@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="SVKM">
-    <output-path>$PROJECT_DIR$/../sborka/plugins</output-path>
-    <root id="archive" name="SVKM.jar">
-      <element id="module-output" name="SVKM" />
-    </root>
-  </artifact>
-</component>
